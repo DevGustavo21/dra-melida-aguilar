@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent any element from pushing the page horizontally on mobile. */
+  overflow-x: hidden;
 }
 
 body {
@@ -16,6 +18,17 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Avoid 1px sub-pixel rendering issues that can trigger horizontal scroll. */
+  width: 100%;
+  max-width: 100vw;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
 }
 
 @layer components {

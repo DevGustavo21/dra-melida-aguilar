@@ -38,27 +38,27 @@ export function BannerDecor({ variant = "default" }: BannerDecorProps) {
         <rect width="100%" height="100%" fill="url(#diag-lines)" />
       </svg>
 
-      {/* Floating blurred orbs */}
+      {/* Floating blurred orbs (smaller on mobile to avoid horizontal overflow). */}
       <div
-        className="pointer-events-none absolute -top-24 -right-16 h-72 w-72 rounded-full bg-brand-500/25 blur-3xl animate-float"
+        className="pointer-events-none absolute -right-10 -top-16 h-48 w-48 rounded-full bg-brand-500/25 blur-3xl animate-float sm:-right-16 sm:-top-24 sm:h-72 sm:w-72"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -bottom-28 -left-24 h-80 w-80 rounded-full bg-brand-700/40 blur-3xl animate-float-rev"
+        className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-brand-700/40 blur-3xl animate-float-rev sm:-bottom-28 sm:-left-24 sm:h-80 sm:w-80"
         aria-hidden
       />
 
       {/* Rotated squares */}
       <div
-        className="pointer-events-none absolute right-[6%] top-[18%] h-24 w-24 rotate-[18deg] rounded-2xl border border-white/10"
+        className="pointer-events-none absolute right-[6%] top-[18%] hidden h-24 w-24 rotate-[18deg] rounded-2xl border border-white/10 sm:block"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute left-[8%] bottom-[20%] h-16 w-16 rotate-[35deg] rounded-xl border border-white/10"
+        className="pointer-events-none absolute left-[8%] bottom-[20%] hidden h-16 w-16 rotate-[35deg] rounded-xl border border-white/10 sm:block"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute right-[14%] bottom-[14%] h-10 w-10 -rotate-12 rounded-md bg-white/[0.06]"
+        className="pointer-events-none absolute right-[14%] bottom-[14%] hidden h-10 w-10 -rotate-12 rounded-md bg-white/[0.06] sm:block"
         aria-hidden
       />
       <div
